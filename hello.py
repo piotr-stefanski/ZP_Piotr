@@ -1,4 +1,5 @@
 print("Hello")
 
-def asd(a,b):
+
+def asd(a, b):
     print('asd')
