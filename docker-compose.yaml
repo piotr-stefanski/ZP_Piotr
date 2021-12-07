@@ -1,9 +1,7 @@
 version: "3.9"
 services:
   app:
-    image: python:3.10-alpine
-    command: /bin/sh -c "pip install -r requirements.txt && python main.py"
-    working_dir: /app
+    build: .
     ports:
       - 5000:5000
     volumes:
@@ -11,5 +9,21 @@ services:
 
 #docker-compose.yaml
 #docker-compose up -d -> uruchamianie/przebudowywanie kontenerów
+#docker-compose up -d --build -> uruchamianie/przebudowywanie kontenerów z przebudowaniem obrazu
 #docker-compose ps -> sprawdzanie stanu kontenrów
 #docker-compose exec app /bin/sh -> wchodzenie do kontenera
+
+#instalacja pakietów na podstawie pliku requirements.txt pip install -r requirements.txt
+
+
+
+
+
+
+
+
+#Plan na kolejne zajęcia:
+#1. Komenda do uruchamiania api w kontenerze
+#2. Omówienie czym jest Dockerfile, co zawiera i jak go definiujemy
+#3. Dockerfile dla naszej aplikacji
+#4. Service z bazą danych mongo
